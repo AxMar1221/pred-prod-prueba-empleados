@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,7 @@ import { UploadComponent } from './components/upload/upload.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/login'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
