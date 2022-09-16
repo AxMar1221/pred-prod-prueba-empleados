@@ -30,7 +30,7 @@ import { UploadComponent } from './components/upload/upload.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: '/login'}],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
