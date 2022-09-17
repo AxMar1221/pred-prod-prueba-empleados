@@ -29,14 +29,14 @@ export class RegistroComponent implements OnInit {
     Swal.showLoading();
     this.auht.newUser( this.user )
     .subscribe( resp => {
-      console.log( resp );
+      // console.log( resp );
       Swal.close();
       if ( this.recallUser ){
         localStorage.setItem('email', this.user.email );
       }
       this.router.navigateByUrl('/home');
     }, ( err) => {
-      console.log( err.error.error.message );
+      // console.log( err.error.error.message );
       Swal.fire({
         icon: 'info',
         title: 'Error al autenticar',

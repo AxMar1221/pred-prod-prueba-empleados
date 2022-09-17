@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
-import { EmployeesComponent } from './components/employees/employees.component';
-import { UploadComponent } from './components/upload/upload.component';
+import { EmployeesComponent } from './pages/employees/employees.component';
+import { UploadComponent } from './pages/upload/upload.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
