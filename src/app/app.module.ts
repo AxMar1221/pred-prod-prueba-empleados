@@ -18,6 +18,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { UploadComponent } from './pages/upload/upload.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { UploadComponent } from './pages/upload/upload.component';
     NavbarComponent,
     EmployeesComponent,
     UploadComponent,
-    NgDropFilesDirective
+    NgDropFilesDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
