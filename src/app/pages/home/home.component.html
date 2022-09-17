@@ -1,1 +1,8 @@
 <app-navbar></app-navbar>
+<div class="col">
+  <div class="row container">
+    <div *ngFor="let item of items | async" class="card border-danger mt-3 mb-2" style="max-width: 10rem;">
+      <img class="card-imf-top" [src]="item.url" alt="escudos-loga-mx">
+    </div>
+  </div>
+</div>

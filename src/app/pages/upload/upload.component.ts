@@ -7,6 +7,7 @@ import { UploadimgService } from 'src/app/services/uploadimg.service';
   templateUrl: './upload.component.html',
 })
 export class UploadComponent implements OnInit {
+  inTheDrop: boolean = false;
   files: FileItem[] = [];
 
   constructor( public _loadImages: UploadimgService) { }
@@ -16,5 +17,7 @@ export class UploadComponent implements OnInit {
   loadImages(){
     this._loadImages.loadImagesFirebase( this.files );
   }
-
+  clearFiles(){
+    this.files = [];
+  }
 }

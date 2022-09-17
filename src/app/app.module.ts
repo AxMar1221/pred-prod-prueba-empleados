@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 import { UploadimgService } from './services/uploadimg.service';
 import {APP_BASE_HREF} from '@angular/common';
 
@@ -27,7 +28,8 @@ import { UploadComponent } from './pages/upload/upload.component';
     LoginComponent,
     NavbarComponent,
     EmployeesComponent,
-    UploadComponent
+    UploadComponent,
+    NgDropFilesDirective
   ],
   imports: [
     BrowserModule,
