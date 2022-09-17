@@ -23,6 +23,30 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/Models/file-item.ts":
+/*!*************************************!*\
+  !*** ./src/app/Models/file-item.ts ***!
+  \*************************************/
+/*! exports provided: FileItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileItem", function() { return FileItem; });
+var FileItem = /** @class */ (function () {
+    function FileItem(file) {
+        this.file = file;
+        this.fileName = file.name;
+        this.estateOfCharge = false;
+        this.progress = 0;
+    }
+    return FileItem;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Models/user.model.ts":
 /*!**************************************!*\
   !*** ./src/app/Models/user.model.ts ***!
@@ -161,24 +185,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_uploadimg_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/uploadimg.service */ "./src/app/services/uploadimg.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/navbar/navbar.component */ "./src/app/pages/navbar/navbar.component.ts");
-/* harmony import */ var _pages_employees_employees_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/employees/employees.component */ "./src/app/pages/employees/employees.component.ts");
-/* harmony import */ var _pages_upload_upload_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/upload/upload.component */ "./src/app/pages/upload/upload.component.ts");
+/* harmony import */ var _directives_ng_drop_files_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directives/ng-drop-files.directive */ "./src/app/directives/ng-drop-files.directive.ts");
+/* harmony import */ var _services_uploadimg_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/uploadimg.service */ "./src/app/services/uploadimg.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/navbar/navbar.component */ "./src/app/pages/navbar/navbar.component.ts");
+/* harmony import */ var _pages_employees_employees_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/employees/employees.component */ "./src/app/pages/employees/employees.component.ts");
+/* harmony import */ var _pages_upload_upload_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/upload/upload.component */ "./src/app/pages/upload/upload.component.ts");
+
 
 
 
@@ -203,30 +229,149 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
-                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"],
-                _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_13__["RegistroComponent"],
-                _pages_login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"],
-                _pages_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_15__["NavbarComponent"],
-                _pages_employees_employees_component__WEBPACK_IMPORTED_MODULE_16__["EmployeesComponent"],
-                _pages_upload_upload_component__WEBPACK_IMPORTED_MODULE_17__["UploadComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
+                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
+                _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_14__["RegistroComponent"],
+                _pages_login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
+                _pages_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_16__["NavbarComponent"],
+                _pages_employees_employees_component__WEBPACK_IMPORTED_MODULE_17__["EmployeesComponent"],
+                _pages_upload_upload_component__WEBPACK_IMPORTED_MODULE_18__["UploadComponent"],
+                _directives_ng_drop_files_directive__WEBPACK_IMPORTED_MODULE_2__["NgDropFilesDirective"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_8__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_10__["environment"].firebase),
-                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_9__["AngularFirestoreModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_11__["environment"].firebase),
+                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_10__["AngularFirestoreModule"]
             ],
             providers: [
-                _services_uploadimg_service__WEBPACK_IMPORTED_MODULE_2__["UploadimgService"],
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_3__["APP_BASE_HREF"], useValue: '/' }
+                _services_uploadimg_service__WEBPACK_IMPORTED_MODULE_3__["UploadimgService"],
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_4__["APP_BASE_HREF"], useValue: '/' }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/directives/ng-drop-files.directive.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/directives/ng-drop-files.directive.ts ***!
+  \*******************************************************/
+/*! exports provided: NgDropFilesDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgDropFilesDirective", function() { return NgDropFilesDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _Models_file_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Models/file-item */ "./src/app/Models/file-item.ts");
+
+
+
+var NgDropFilesDirective = /** @class */ (function () {
+    function NgDropFilesDirective() {
+        this.files = [];
+        this.mouseIn = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    NgDropFilesDirective.prototype.onDragEnter = function (event) {
+        this.mouseIn.emit(true);
+        this._preventKeep(event);
+    };
+    NgDropFilesDirective.prototype.onDragLeave = function (event) {
+        this.mouseIn.emit(false);
+    };
+    NgDropFilesDirective.prototype.onDrop = function (event) {
+        var transfer = this._getTransfer(event);
+        if (!transfer) {
+            return;
+        }
+        this._extracFile(transfer.files);
+        this._preventKeep(event);
+        this.mouseIn.emit(false);
+    };
+    NgDropFilesDirective.prototype._getTransfer = function (event) {
+        return event.dataTransfer ? event.dataTransfer
+            : event.originalEvent.dataTransfer;
+    };
+    NgDropFilesDirective.prototype._extracFile = function (filesList) {
+        // console.log( filesList );
+        for (var property in Object.getOwnPropertyNames(filesList)) {
+            var fileTemp = filesList[property];
+            if (this._fileCanUpload(fileTemp)) {
+                var newFile = new _Models_file_item__WEBPACK_IMPORTED_MODULE_2__["FileItem"](fileTemp);
+                this.files.push(newFile);
+            }
+        }
+        console.log(this.files);
+    };
+    //validations
+    NgDropFilesDirective.prototype._fileCanUpload = function (file) {
+        if (!this._fileWasDrop(file.name) && this._isImage(file.type)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    NgDropFilesDirective.prototype._preventKeep = function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    };
+    NgDropFilesDirective.prototype._fileWasDrop = function (fileName) {
+        for (var _i = 0, _a = this.files; _i < _a.length; _i++) {
+            var file = _a[_i];
+            if (file.fileName === fileName) {
+                console.log('El archivo' + fileName + 'ya esta cargado');
+                return true;
+            }
+        }
+        return false;
+    };
+    NgDropFilesDirective.prototype._isImage = function (typeFile) {
+        return (typeFile === '' || typeFile === undefined) ? false
+            : typeFile.startsWith('image');
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], NgDropFilesDirective.prototype, "files", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], NgDropFilesDirective.prototype, "mouseIn", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('dragover', ['$event']),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], NgDropFilesDirective.prototype, "onDragEnter", null);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('dragleave', ['$event']),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], NgDropFilesDirective.prototype, "onDragLeave", null);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('drop', ['$event']),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], NgDropFilesDirective.prototype, "onDrop", null);
+    NgDropFilesDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appNgDropFiles]'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], NgDropFilesDirective);
+    return NgDropFilesDirective;
 }());
 
 
@@ -330,7 +475,7 @@ var EmployeesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"col\">\n  <div class=\"row container\">\n    <div *ngFor=\"let item of items | async\" class=\"card border-danger mt-3 mb-2\" style=\"max-width: 10rem;\">\n      <img class=\"card-imf-top\" [src]=\"item.url\" alt=\"escudos-loga-mx\">\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -346,10 +491,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(afs) {
+        this.afs = afs;
+        this.itemsCollection = afs.collection('img');
+        this.items = this.itemsCollection.valueChanges();
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
@@ -358,7 +508,7 @@ var HomeComponent = /** @class */ (function () {
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/pages/home/home.component.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -605,7 +755,7 @@ var RegistroComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Seleccione archivos</h3>\n    <div class=\"well drop-zone\">\n      <h4>Arraste aquí sus archivos</h4>\n      <img  src=\"/assets/drop-images.png\" alt=\"\">\n    </div>\n  </div>\n  <div class=\"cold-md-8\">\n    <h4>Cargar imágenes</h4>\n    <button (click)=\"loadImages()\" disabled=\"files.length === 0\" class=\"btn btn-success btn-space\">subir imagen</button>\n    <button class=\"btn btn-danger btn-space\">Limpiar</button>\n    <table class=\"table\">\n      <thead class=\"thead bg-primary\">\n        <tr>\n          <th>Nombre archivo</th>\n          <th>Tamaño</th>\n          <th>Progreso</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>XYZ</td>\n          <td>12 MB</td>\n          <td>\n            <div class=\"progress\">\n              <div class=\"progress-bar\" role=\"progressbar\" aria-label=\"Basic example\" style=\"width: 25%\"></div>\n            </div>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"row-container\">\n  <div class=\"col-md-4 mt-3 container\">\n    <h3>Seleccione archivos</h3>\n    <div appNgDropFiles\n         [files]=\"files\"\n         (mouseIn)=\"inTheDrop = $event\" [ngClass]=\"{'file-over': inTheDrop }\" class=\"well drop-zone\">\n      <h4>Arraste aquí sus archivos</h4>\n      <img  src=\"/assets/drag-and-drop-images.png\" alt=\"\">\n    </div>\n  </div>\n  <div class=\"cold-md-8 mt-3 container\">\n    <h4 class=\"text-center\">Cargar imágenes</h4>\n    <div class=\"text-center\">\n      <button (click)=\"loadImages()\" [disabled]=\"files.length === 0\" class=\"btn btn-success btn-space\">subir imagen</button>\n      <button (click)=\"clearFiles()\" class=\"btn btn-danger btn-space\">Limpiar</button>\n      <table class=\"table\">\n        <thead class=\"thead bg-primary\">\n          <tr>\n            <th>Nombre archivo</th>\n            <th>Tamaño</th>\n            <th>Estado</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let file of files\">\n            <td [ngClass]=\"{ 'text-green' : file.progress >= 100}\">\n              {{ file.fileName }}\n            </td>\n            <td>{{ file.file.size /1024/1024 | number: '.2-2' }} MB</td>\n            <td>\n              <div class=\"progress\">\n                <div class=\"progress-bar\"\n                     role=\"progressbar\"\n                     [ngStyle]=\"{'width': file.progress + '%'}\">\n                </div>\n              </div>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -628,12 +778,16 @@ __webpack_require__.r(__webpack_exports__);
 var UploadComponent = /** @class */ (function () {
     function UploadComponent(_loadImages) {
         this._loadImages = _loadImages;
+        this.inTheDrop = false;
         this.files = [];
     }
     UploadComponent.prototype.ngOnInit = function () {
     };
     UploadComponent.prototype.loadImages = function () {
         this._loadImages.loadImagesFirebase(this.files);
+    };
+    UploadComponent.prototype.clearFiles = function () {
+        this.files = [];
     };
     UploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -754,19 +908,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/index.esm.js");
+
+
 
 
 
 var UploadimgService = /** @class */ (function () {
     function UploadimgService(db) {
         this.db = db;
-        this.IMG_FOlDER = 'img';
+        this.IMG_FOLDER = 'img';
     }
     UploadimgService.prototype.loadImagesFirebase = function (images) {
-        console.log(images);
+        var _this = this;
+        var storageRef = firebase__WEBPACK_IMPORTED_MODULE_3__["storage"]().ref();
+        var _loop_1 = function (item) {
+            item.estateOfCharge = true;
+            if (item.progress >= 100) {
+                return "continue";
+            }
+            var uploadTask = storageRef.child(" " + this_1.IMG_FOLDER + "/" + item.fileName)
+                .put(item.file);
+            uploadTask.on(firebase__WEBPACK_IMPORTED_MODULE_3__["storage"].TaskEvent.STATE_CHANGED, function (snapshot) { return item.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100; }, function (error) { return console.log('Error al subir', error); }, function () {
+                console.log('Imagen cargada', item.progress);
+                uploadTask.snapshot.ref.getDownloadURL()
+                    .then(function (data) {
+                    _this.saveImg({
+                        name: item.fileName,
+                        url: data
+                    });
+                    item.estateOfCharge = false;
+                });
+            });
+        };
+        var this_1 = this;
+        for (var _i = 0, images_1 = images; _i < images_1.length; _i++) {
+            var item = images_1[_i];
+            _loop_1(item);
+        }
     };
     UploadimgService.prototype.saveImg = function (image) {
-        this.db.collection("/" + this.IMG_FOlDER)
+        this.db.collection("/" + this.IMG_FOLDER)
             .add(image);
     };
     UploadimgService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
