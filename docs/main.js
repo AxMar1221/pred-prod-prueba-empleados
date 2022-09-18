@@ -137,7 +137,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  <router-outlet></router-outlet>\n"
+module.exports = "  <router-outlet></router-outlet>\n  <app-footer></app-footer>\n"
 
 /***/ }),
 
@@ -204,6 +204,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/navbar/navbar.component */ "./src/app/pages/navbar/navbar.component.ts");
 /* harmony import */ var _pages_employees_employees_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/employees/employees.component */ "./src/app/pages/employees/employees.component.ts");
 /* harmony import */ var _pages_upload_upload_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/upload/upload.component */ "./src/app/pages/upload/upload.component.ts");
+/* harmony import */ var _pages_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/footer/footer.component */ "./src/app/pages/footer/footer.component.ts");
+
 
 
 
@@ -236,7 +238,8 @@ var AppModule = /** @class */ (function () {
                 _pages_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_16__["NavbarComponent"],
                 _pages_employees_employees_component__WEBPACK_IMPORTED_MODULE_17__["EmployeesComponent"],
                 _pages_upload_upload_component__WEBPACK_IMPORTED_MODULE_18__["UploadComponent"],
-                _directives_ng_drop_files_directive__WEBPACK_IMPORTED_MODULE_2__["NgDropFilesDirective"]
+                _directives_ng_drop_files_directive__WEBPACK_IMPORTED_MODULE_2__["NgDropFilesDirective"],
+                _pages_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__["FooterComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
@@ -431,7 +434,7 @@ var AuthGuard = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<p>employees works!</p>\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"container mt-3\">\n  <form class=\"d-flex\" role=\"search\">\n  <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n  <button class=\"btn btn-success btn-space\" type=\"submit\">Search</button>\n  </form>\n</div>\n<div class=\"container tex-center\">\n  <table class=\"table table-dark table-hover\">\n    <thead>\n      <tr>\n        <th scope=\"col\">#ID</th>\n      <th scope=\"col\">Nombre</th>\n      <th scope=\"col\">Apellido</th>\n      <th scope=\"col\">Fecha de nacimiento</th>\n    </tr>\n  </thead>\n  <tbody *ngFor=\"let employee of employees\">\n    <tr>\n      <td>{{ employee.id }}</td>\n      <td>{{ employee.last_name }}</td>\n      <td>{{ employee.name }}</td>\n      <td>{{ employee.birthday | date:'dd-MM-yyyy'}}</td>\n    </tr>\n  </tbody>\n</table>\n</div>\n\n"
 
 /***/ }),
 
@@ -447,21 +450,71 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesComponent", function() { return EmployeesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_employees_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/employees.service */ "./src/app/services/employees.service.ts");
+
 
 
 var EmployeesComponent = /** @class */ (function () {
-    function EmployeesComponent() {
+    function EmployeesComponent(_employees) {
+        var _this = this;
+        this._employees = _employees;
+        this._employees.getEmployees()
+            .subscribe(function (data) {
+            console.log(data.data);
+            _this.employees = data.data.employees;
+        });
     }
-    EmployeesComponent.prototype.ngOnInit = function () {
-    };
     EmployeesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-employees',
             template: __webpack_require__(/*! ./employees.component.html */ "./src/app/pages/employees/employees.component.html"),
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_employees_service__WEBPACK_IMPORTED_MODULE_2__["EmployeesService"]])
     ], EmployeesComponent);
     return EmployeesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/footer/footer.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/pages/footer/footer.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"col mt-3\">\n  <div class=\"container text-center\">\n    <img src=\"https://github.com/AxMar1221.png\"\n         alt=\"\"\n         width=\"32\"\n         height=\"32\"\n         class=\"rounded-circle me-2\">\n    <strong>Tachi {{ anio }}</strong>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/footer/footer.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/pages/footer/footer.component.ts ***!
+  \**************************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent() {
+        this.anio = new Date().getFullYear();
+    }
+    FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-footer',
+            template: __webpack_require__(/*! ./footer.component.html */ "./src/app/pages/footer/footer.component.html"),
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], FooterComponent);
+    return FooterComponent;
 }());
 
 
@@ -475,7 +528,7 @@ var EmployeesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<div class=\"col\">\n  <div class=\"row container\">\n    <div *ngFor=\"let item of items | async\" class=\"card border-danger mt-3 mb-2\" style=\"max-width: 10rem;\">\n      <img class=\"card-imf-top\" [src]=\"item.url\" alt=\"escudos-loga-mx\">\n    </div>\n  </div>\n</div>\n"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"col\">\n  <div class=\"row container mt-3\">\n    <br>\n    <h5 class=\"text-center animated fadeInLeft text-danger\">Imagenes cargadas</h5>\n    <hr>\n      <div *ngFor=\"let item of items | async\"\n      class=\"card border-danger mt-3 mb-2 animated fadeInRight\"\n      style=\"width: 8rem;\">\n      <img class=\"card-imf-top\" [src]=\"item.url\" alt=\"escudos-liga-mx\">\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -524,7 +577,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"limiter animated fadeInLeft\">\n    <div class=\"container-login100\">\n        <div class=\"wrap-login100 p-t-50 p-b-90\">\n            <form (ngSubmit)=\"login( form )\"\n                  #form=\"ngForm\"\n                  class=\"login100-form validate-form flex-sb flex-w\">\n                <span class=\"login100-form-title p-b-51\">\n                    Login\n                </span>\n                <span *ngIf=\"form.submitted && form.controls['email'].errors\"\n                      class=\"text-danger animated fadeIn\">El email es obligatorio</span>\n                <div class=\"wrap-input100 m-b-16\">\n                    <input class=\"input100\"\n                           type=\"email\"\n                           name=\"email\"\n                           [(ngModel)]=\"user.email\"\n                           required\n                           email\n                           placeholder=\"Correo electronico\">\n                    <span class=\"focus-input100\"></span>\n                </div>\n                <span *ngIf=\"form.submitted && form.controls['password'].errors\"\n                      class=\"text-danger animated fadeIn\">El password debe tener minimo 6 caracteres</span>\n                <div class=\"wrap-input100 m-b-16\" data-validate = \"Password is required\">\n                    <input class=\"input100\"\n                           type=\"password\"\n                           name=\"password\"\n                           [(ngModel)]=\"user.password\"\n                           required\n                           minlength=\"6\"\n                           placeholder=\"Password\">\n                    <span class=\"focus-input100\"></span>\n                </div>\n                <div class=\"flex-sb-m w-full p-t-3 p-b-24\">\n                    <div class=\"contact100-form-checkbox\">\n                        <input ngModel=\"recallUser\"\n                               class=\"input-checkbox100\" id=\"ckb1\" type=\"checkbox\" name=\"remember-me\">\n                        <label class=\"label-checkbox100\" for=\"ckb1\">\n                            Recordar mi usuario\n                        </label>\n                    </div>\n                    <div>\n                        <a routerLink=\"/registro\" class=\"txt1\">\n                            ¿No tienes cuenta?\n                        </a>\n                    </div>\n                </div>\n                <div class=\"container-login100-form-btn m-t-17\">\n                    <button class=\"login100-form-btn\" type=\"submit\">\n                        Ingresar\n                    </button>\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n\n"
+module.exports = "<body oncopy=\"return false\" onpaste=\"return false\">\n  <div class=\"limiter animated fadeInLeft\">\n    <div class=\"container-login100\">\n      <div class=\"wrap-login100 p-t-50 p-b-90\">\n        <form (ngSubmit)=\"login( form )\"\n        #form=\"ngForm\"\n        class=\"login100-form validate-form flex-sb flex-w\">\n        <span class=\"login100-form-title p-b-51\">\n          Login\n        </span>\n        <span *ngIf=\"form.submitted && form.controls['email'].errors\"\n        class=\"text-danger animated fadeIn\">El email es obligatorio</span>\n        <div class=\"wrap-input100 m-b-16\">\n          <input class=\"input100\"\n                           type=\"email\"\n                           name=\"email\"\n                           [(ngModel)]=\"user.email\"\n                           required\n                           email\n                           placeholder=\"Correo electronico\">\n                    <span class=\"focus-input100\"></span>\n                </div>\n                <span *ngIf=\"form.submitted && form.controls['password'].errors\"\n                      class=\"text-danger animated fadeIn\">El password debe tener minimo 6 caracteres</span>\n                      <div class=\"wrap-input100 m-b-16\" data-validate = \"Password is required\">\n                    <input class=\"input100\"\n                    type=\"password\"\n                           name=\"password\"\n                           [(ngModel)]=\"user.password\"\n                           required\n                           minlength=\"6\"\n                           placeholder=\"Password\">\n                           <span class=\"focus-input100\"></span>\n                          </div>\n                <div class=\"flex-sb-m w-full p-t-3 p-b-24\">\n                    <div>\n                        <a routerLink=\"/registro\" class=\"txt1\">\n                          ¿No tienes cuenta?\n                        </a>\n                      </div>\n                </div>\n                <div class=\"container-login100-form-btn m-t-17\">\n                    <button class=\"login100-form-btn\" type=\"submit\">\n                        Ingresar\n                    </button>\n                </div>\n            </form>\n        </div>\n    </div>\n</div>\n</body>\n"
 
 /***/ }),
 
@@ -614,7 +667,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-dark bg-primary\">\n    <a class=\"navbar-brand\" routerLink=\"/home\" >Prueba Técnica</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav me-auto\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/employees\">Empleados</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/upload\">Cargar fotos</a>\n          </li>\n        </ul>\n        <form class=\"d-flex\" role=\"search\">\n          <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n          <button class=\"btn btn-success btn-space\" type=\"submit\">Search</button>\n          <button class=\"btn btn-danger btn-space\"\n                  (click)=\"logout()\">Logout</button>\n        </form>\n      </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-primary\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" routerLink=\"/home\" >Prueba Técnica</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav me-auto\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/employees\">Empleados</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/upload\">Cargar fotos</a>\n          </li>\n        </ul>\n        <form class=\"d-flex\" role=\"search\">\n          <button class=\"btn btn-danger btn-space\"\n                  (click)=\"logout()\">Logout</button>\n        </form>\n      </div>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -669,7 +722,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"limiter animated fadeInRight\">\n        <div class=\"container-login100\">\n            <div class=\"wrap-login100 p-t-50 p-b-90\">\n                <form (ngSubmit)=\"onSubmit( form )\"\n                      #form=\"ngForm\"\n                      class=\"login100-form validate-form flex-sb flex-w\">\n                    <span class=\"login100-form-title p-b-51\">\n                        Crear nueva cuenta\n                    </span>\n                    <span *ngIf=\"form.submitted && form.controls['email'].errors\"\n                          class=\"text-danger animated fadeIn\">El email es obligatorio</span>\n                    <div class=\"wrap-input100 m-b-16\">\n                        <input class=\"input100\"\n                               type=\"email\"\n                               name=\"email\"\n                               [(ngModel)]=\"user.email\"\n                               required\n                               email\n                               placeholder=\"Email\"s>\n                        <span class=\"focus-input100\"></span>\n                    </div>\n                    <span *ngIf=\"form.submitted && form.controls['name'].errors\"\n                    class=\"text-danger animated fadeIn\">El nombre es obligatorio</span>\n                    <div class=\"wrap-input100 m-b-16\">\n                        <input class=\"input100\"\n                               type=\"text\"\n                               name=\"name\"\n                               [(ngModel)]=\"user.name\"\n                               minlength=\"2\"\n                               required\n                               placeholder=\"Nombre y apellidos\">\n                        <span class=\"focus-input100\"></span>\n                    </div>\n                    <span *ngIf=\"form.submitted && form.controls['password'].errors\"\n                    class=\"text-danger animated fadeIn\">El password debe tener minimo 6 caracteres</span>\n                    <div class=\"wrap-input100 m-b-16\">\n                        <input class=\"input100\"\n                               type=\"password\"\n                               name=\"password\"\n                               [(ngModel)]=\"user.password\"\n                               required\n                               minlength=\"6\"\n                               placeholder=\"Password\">\n                        <span class=\"focus-input100\"></span>\n                    </div>\n                    <div class=\"flex-sb-m w-full p-t-3 p-b-24\">\n                        <div class=\"contact100-form-checkbox\">\n                            <input ngModel=\"recallUser\"\n                                   class=\"input-checkbox100\" id=\"ckb1\" type=\"checkbox\" name=\"remember-me\">\n                            <label class=\"label-checkbox100\" for=\"ckb1\">\n                                Recordar mi usuario\n                            </label>\n                        </div>\n                        <div>\n                            <a routerLink=\"/login\" class=\"txt1\">\n                                ¿Ya tienes cuenta? / Ingresar\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"container-login100-form-btn m-t-17\">\n                        <button class=\"login100-form-btn\" type=\"submit\">\n                            Crear cuenta\n                        </button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n\n"
+module.exports = "<body oncopy=\"return false\" onpaste=\"return false\">\n<div class=\"limiter animated fadeInRight\">\n        <div class=\"container-login100\">\n            <div class=\"wrap-login100 p-t-50 p-b-90\">\n                <form (ngSubmit)=\"onSubmit( form )\"\n                      #form=\"ngForm\"\n                      class=\"login100-form validate-form flex-sb flex-w\">\n                    <span class=\"login100-form-title p-b-51\">\n                        Crear cuenta nueva\n                    </span>\n                    <span *ngIf=\"form.submitted && form.controls['email'].errors\"\n                          class=\"text-danger animated fadeIn\">El email es obligatorio</span>\n                    <div class=\"wrap-input100 m-b-16\">\n                        <input class=\"input100\"\n                               type=\"email\"\n                               name=\"email\"\n                               [(ngModel)]=\"user.email\"\n                               required\n                               email\n                               placeholder=\"Email\"s>\n                        <span class=\"focus-input100\"></span>\n                    </div>\n                    <span *ngIf=\"form.submitted && form.controls['name'].errors\"\n                    class=\"text-danger animated fadeIn\">El nombre es obligatorio</span>\n                    <div class=\"wrap-input100 m-b-16\">\n                        <input class=\"input100\"\n                               type=\"text\"\n                               name=\"name\"\n                               [(ngModel)]=\"user.name\"\n                               minlength=\"2\"\n                               required\n                               placeholder=\"Nombre y apellidos\">\n                        <span class=\"focus-input100\"></span>\n                    </div>\n                    <span *ngIf=\"form.submitted && form.controls['password'].errors\"\n                    class=\"text-danger animated fadeIn\">El password debe tener minimo 6 caracteres</span>\n                    <div class=\"wrap-input100 m-b-16\">\n                        <input class=\"input100\"\n                               type=\"password\"\n                               name=\"password\"\n                               [(ngModel)]=\"user.password\"\n                               required\n                               minlength=\"6\"\n                               placeholder=\"Password\">\n                        <span class=\"focus-input100\"></span>\n                    </div>\n                    <div class=\"flex-sb-m w-full p-t-3 p-b-24\">\n                        <div>\n                            <a routerLink=\"/login\" class=\"txt1\">\n                                ¿Ya tienes cuenta? / Ingresar\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"container-login100-form-btn m-t-17\">\n                        <button class=\"login100-form-btn\" type=\"submit\">\n                            Crear cuenta\n                        </button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -888,6 +941,42 @@ var AuthService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], AuthService);
     return AuthService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/employees.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/services/employees.service.ts ***!
+  \***********************************************/
+/*! exports provided: EmployeesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmployeesService", function() { return EmployeesService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var EmployeesService = /** @class */ (function () {
+    function EmployeesService(http) {
+        this.http = http;
+    }
+    EmployeesService.prototype.getEmployees = function () {
+        return this.http.get('https://6edeayi7ch.execute-api.us-east-1.amazonaws.com/v1/examen/employees/:mario_hernandez');
+    };
+    EmployeesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], EmployeesService);
+    return EmployeesService;
 }());
 
 
