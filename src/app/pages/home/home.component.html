@@ -1,8 +1,13 @@
 <app-navbar></app-navbar>
 <div class="col">
-  <div class="row container">
-    <div *ngFor="let item of items | async" class="card border-danger mt-3 mb-2" style="max-width: 10rem;">
-      <img class="card-imf-top" [src]="item.url" alt="escudos-loga-mx">
+  <div class="row container mt-3">
+    <br>
+    <h5 class="text-center animated fadeInLeft text-danger">Imagenes cargadas</h5>
+    <hr>
+      <div *ngFor="let item of items | async"
+      class="card border-danger mt-3 mb-2 animated fadeInRight"
+      style="width: 8rem;">
+      <img class="card-imf-top" [src]="item.url" alt="escudos-liga-mx">
     </div>
   </div>
 </div>

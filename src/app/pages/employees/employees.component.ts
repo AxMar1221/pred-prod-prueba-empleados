@@ -1,14 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeesModel } from 'src/app/Models/employees';
+import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
 })
-export class EmployeesComponent implements OnInit {
+export class EmployeesComponent {
+  employees: EmployeesModel;
 
-  constructor() { }
+  constructor( private _employees: EmployeesService) {
 
-  ngOnInit() {
+    this._employees.getEmployees()
+    .subscribe( ( data : any) =>{
+      console.log(data.data)
+      this.employees = data.data.employees
+    })
   }
 
 }

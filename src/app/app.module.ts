@@ -20,7 +20,6 @@ import { EmployeesComponent } from './pages/employees/employees.component';
 import { UploadComponent } from './pages/upload/upload.component';
 import { FooterComponent } from './pages/footer/footer.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +30,7 @@ import { FooterComponent } from './pages/footer/footer.component';
     EmployeesComponent,
     UploadComponent,
     NgDropFilesDirective,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

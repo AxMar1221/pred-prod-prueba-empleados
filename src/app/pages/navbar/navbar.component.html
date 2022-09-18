@@ -1,4 +1,5 @@
-<nav class="navbar navbar-dark bg-primary">
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+  <div class="container-fluid">
     <a class="navbar-brand" routerLink="/home" >Prueba Técnica</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -13,10 +14,9 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success btn-space" type="submit">Search</button>
           <button class="btn btn-danger btn-space"
                   (click)="logout()">Logout</button>
         </form>
       </div>
+  </div>
 </nav>
